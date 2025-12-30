@@ -63,6 +63,6 @@ app.get("/wallet", (req, res) => {
 
 // start server
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log("Server chạy tại http://localhost:" + PORT);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server running on port " + PORT));
+
